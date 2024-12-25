@@ -1,0 +1,277 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* 灰白背景 */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+}
+/* Header Styling */
+header {
+    background-color: #f9f9f9; 
+    padding: 1.5em 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #3e3e3e; /* 深灰色字体 */
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 1.5em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #3e3e3e;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #007bff; /* 蓝色高亮 */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('/asset/Background.jpeg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* 确保文字可读 */
+    padding: 50px 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); 
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.hero h2 {
+    margin-top: 2.5em;
+    font-size: 4rem;
+    margin-bottom: 2.5em;
+    color: #161616;
+}
+
+
+.hero p {
+    font-size: 1.5rem; /* 设置字体大小为根元素字体大小的1.2倍 */
+    margin-bottom: 1.5em;
+    color: #181818;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    background-color: #ffffff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+/* Gallery Section */
+.gallery {
+    background-color: #f8f9fa;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px; /* 图片之间的间距 */
+    overflow-x: auto; /* 启用水平滚动 */
+    overflow-y: hidden; /* 隐藏竖直滚动条 */
+    scroll-snap-type: x mandatory; /* 启用滚动捕捉 */
+}
+
+.gallery-item {
+    background: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto; /* 防止图片项缩放 */
+    width: 300px;   /* 设置每个图片项的宽度为 300px */
+    text-align: center;
+    scroll-snap-align: center; /* 设置滚动捕捉对齐方式 */
+}
+
+
+.gallery h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin-top: 0.5em;
+    font-size: 1rem;
+    color: #555;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 1.5em 0;
+    text-align: center;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.button-container {
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: space-between; /* 在主轴上均匀分布按钮 */
+    width: 100%; /* 容器宽度占满父元素 */
+    max-width: 1400px; /* 设置按钮容器的最大宽度 */
+    margin: 0 auto; /* 水平居中容器 */
+}
+
+.cta-button {
+    flex: 1; /* 每个按钮占据相等的空间 */
+    text-align: center; /* 文字居中 */
+    padding: 10px; /* 内边距 */
+    margin: 0 10px; /* 按钮之间的间距 */
+    text-decoration: none; /* 去除链接下划线 */
+    background-color: #1d1d1d; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去除边框 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    box-sizing: border-box; /* 包含内边距和边框在内的总宽度 */
+}
+
+.cta-button:hover {
+    background-color: #45a049; /* 悬停时的背景色 */
+}
+
+
+
+
+.UM {
+    width: 2em; /* 设置为字体大小的单位，确保与文字大小一致 */
+    height: auto; /* 保持图片的纵横比 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    margin-right: 0.5em; /* 图片与文字之间的间距 */
+}
+
+
+
+/* 遮罩层样式 */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 全屏图片样式 */
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
