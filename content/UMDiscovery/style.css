@@ -158,20 +158,6 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* 添加细线 */
-.sidebar ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 50px;
-    background: #7c7c7c;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-    z-index: 0; /* 确保线条在文字下层 */
-}
 
 
 
