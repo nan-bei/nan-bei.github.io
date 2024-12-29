@@ -1,160 +1,209 @@
 /* Reset & Base Styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 重置所有元素的外边距 */
+    padding: 0; /* 重置所有元素的内边距 */
+    box-sizing: border-box; 
+
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* 设置字体为Arial，备选sans-serif */
+    line-height: 1.6; /* 设置行高为字体大小的1.6倍 */
+    color: #333; /* 文本颜色为深灰色 */
     background-color: #f8f9fa; /* 灰白背景 */
-    margin: 0;
-    padding: 0;
+    margin: 0; /* 页面外边距设为0 */
+    padding: 0; /* 页面内边距设为0 */
 }
-
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%; /* 容器宽度为视口宽度的90% */
+    max-width: 1200px; /* 最大宽度为1200像素 */
+    margin: 0 auto; /* 水平居中容器 */
 }
 
 .container2 {
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
+    display: flex; /* 启用Flexbox布局 */
+    justify-content: center; /* 水平居中对齐内容 */
+    align-items: center; /* 垂直居中对齐内容 */
+    
 }
+
 /* Header Styling */
 header {
-    background-color: #f9f9f9; 
-    padding: 1.5em 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #f9f9f9; /* 设置背景色为浅灰色 */
+    padding: 1.5em 0; /* 上下内边距为1.5em */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影效果 */
+    position: sticky; /* 使头部固定在视口顶部 */
+    top: 0; /* 固定位置为顶部 */
+    z-index: 1000; /* 确保头部位于其他元素之上 */
 }
 
 header h1 {
-    color: #3e3e3e; /* 深灰色字体 */
-    font-size: 2rem;
+    color: #3e3e3e; /* 设置标题字体颜色为深灰色 */
+    font-size: 2rem; /* 字体大小为2rem */
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
+    list-style: none; /* 去除列表默认样式 */
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: flex-end; /* 将导航项右对齐 */
 }
 
 header nav ul li {
-    margin-left: 1.5em;
+    margin-left: 1.5em; /* 每个导航项之间的间距 */
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: #3e3e3e;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    text-decoration: none; /* 去除链接下划线 */
+    color: #3e3e3e; /* 设置链接文字颜色为深灰色 */
+    font-weight: bold; /* 设置字体加粗 */
+    font-size: 1.1rem; /* 设置字体大小 */
+    transition: color 0.3s; /* 添加颜色过渡效果 */
 }
 
 header nav ul li a:hover {
-    color: #007bff; /* 蓝色高亮 */
+    color: #007bff; /* 鼠标悬停时字体颜色变为蓝色 */
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    background: url('/asset/Background.jpeg') no-repeat center center;
-    background-size: cover;
-    color: #fff; /* 确保文字可读 */
-    padding: 50px 0;
+    position: relative; /* 设置相对定位 */
+    background: url('/asset/Background.jpeg') no-repeat center center; /* 设置背景图片及其位置 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    color: #fff; /* 确保文字颜色为白色，便于阅读 */
+    padding: 50px 0; /* 上下内边距为50像素 */
+
+    
+    
 }
 
-.hero::before {
+
+
+.content2 {
+    animation: content-slide-in 2s steps(25) forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-family: sans-serif;
+    
+  }
+
+.content2::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.4); 
-    z-index: 1;
+    right: 0;
+    height: 16px;
+    animation: sprinkle-bling .5s steps(2) infinite;
+  }
+
+
+@keyframes content-slide-in {
+    from {
+      width: 0ch;
+    }
+    to {
+      width: 25ch;
+    }
+  }
+  
+@keyframes sprinkle-bling {
+    from {
+      border-right: 1px solid transparent;
+    }
+    to {
+      border-right: 1px solid #000;
+    }
+  }
+
+.hero::before {
+    content: ''; /* 添加一个伪元素 */
+    position: absolute; /* 设置绝对定位 */
+    top: 0; /* 伪元素覆盖顶部 */
+    left: 0; /* 伪元素覆盖左侧 */
+    width: 100%; /* 宽度为100% */
+    height: 100%; /* 高度为100% */
+    background-color: rgba(255, 255, 255, 0.4); /* 添加白色透明遮罩 */
+    z-index: 1; /* 确保伪元素在背景之上 */
 }
+
 
 .hero-text {
-    position: relative;
-    z-index: 2;
-    text-align: center;
+    position: relative; /* 设置相对定位 */
+    z-index: 2; /* 确保文字在遮罩之上 */
+    text-align: center; /* 文本居中对齐 */
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 水平居中 */
+    justify-content: space-between; /* 保持子元素间距 */
+    height: 100%;
+    
 }
-
 
 .hero h2 {
-    margin-top: 2.5em;
-    font-size: 4rem;
-    margin-bottom: 2.5em;
-    color: #161616;
+    margin-top: 2.5em; /* 上外边距为2.5em */
+    font-size: 4rem; /* 设置字体大小为4rem */
+    margin-bottom: 2.5em; /* 下外边距为2.5em */
+    color: #161616; /* 设置字体颜色为深灰色 */
+    
 }
 
-
 .hero p {
-    font-size: 1.5rem; /* 设置字体大小为根元素字体大小的1.2倍 */
-    margin-bottom: 1.5em;
-    color: #181818;
+    font-size: 1.5rem; /* 设置字体大小为根元素字体大小的1.5倍 */
+    margin-bottom: 1.5em; /* 下外边距为1.5em */
+    color: #181818; /* 设置字体颜色为稍浅的灰色 */
 }
 
 .cta-button {
-    text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.8em 1.5em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* 去除链接下划线 */
+    background-color: #007bff; /* 设置按钮背景色为蓝色 */
+    color: #fff; /* 设置按钮文字颜色为白色 */
+    padding: 0.8em 1.5em; /* 设置内边距 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+    background-color: #0056b3; /* 鼠标悬停时背景色变深 */
+    transform: scale(1.05); /* 鼠标悬停时按钮放大 */
 }
 
 /* Features Section */
 .features {
-    background-color: #ffffff;
-    padding: 2em 0;
-    text-align: center;
+    background-color: #ffffff; /* 设置背景色为白色 */
+    padding: 2em 0; /* 上下内边距为2em */
+    text-align: center; /* 文本居中对齐 */
 }
 
 .features h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1em;
-    color: #333;
+    font-size: 1.8rem; /* 设置标题字体大小 */
+    margin-bottom: 1em; /* 设置标题下外边距 */
+    color: #333; /* 设置标题颜色为深灰色 */
 }
 
 .features ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* 去除列表默认样式 */
+    padding: 0; /* 去除内边距 */
 }
 
 .features ul li {
-    font-size: 1.2rem;
-    margin-bottom: 0.5em;
-    color: #555;
+    font-size: 1.2rem; /* 设置列表项字体大小 */
+    margin-bottom: 0.5em; /* 设置列表项下外边距 */
+    color: #555; /* 设置字体颜色为浅灰色 */
 }
 
 /* Gallery Section */
 .gallery {
-    background-color: #f8f9fa;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+    background-color: #f8f9fa; /* 设置背景色为灰白色 */
+    text-align: center; /* 文本居中对齐 */
+    display: flex; /* 启用Flexbox布局 */
+    justify-content: center; /* 水平居中对齐内容 */
+    align-items: center; /* 垂直居中对齐内容 */
+    padding: 20px 0; /* 上下内边距为20像素 */
 }
 
 .gallery-container {
-    display: flex;
+    display: flex; /* 启用Flexbox布局 */
     gap: 20px; /* 图片之间的间距 */
     overflow-x: auto; /* 启用水平滚动 */
     overflow-y: hidden; /* 隐藏竖直滚动条 */
@@ -162,41 +211,40 @@ header nav ul li a:hover {
 }
 
 .gallery-item {
-    background: #fff;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff; /* 设置背景色为白色 */
+    padding: 1em; /* 设置内边距为1em */
+    border-radius: 10px; /* 设置圆角为10像素 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影效果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
     flex: 0 0 auto; /* 防止图片项缩放 */
-    width: 300px;   /* 设置每个图片项的宽度为 300px */
-    text-align: center;
+    width: 300px; /* 设置每个图片项的宽度为300像素 */
+    text-align: center; /* 文本居中对齐 */
     scroll-snap-align: center; /* 设置滚动捕捉对齐方式 */
 }
 
-
 .gallery h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5em;
-    color: #333;
+    font-size: 1.8rem; /* 设置标题字体大小 */
+    margin-bottom: 1.5em; /* 设置标题下外边距 */
+    color: #333; /* 设置字体颜色为深灰色 */
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5em;
+    display: grid; /* 启用网格布局 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 自适应网格列宽 */
+    gap: 1.5em; /* 设置网格项之间的间距 */
 }
 
-
 .gallery-item img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%; /* 图片宽度占满容器 */
+    border-radius: 10px; /* 设置图片圆角 */
 }
 
 .gallery-item p {
-    margin-top: 0.5em;
-    font-size: 1rem;
-    color: #555;
+    margin-top: 0.5em; /* 设置文字上外边距 */
+    font-size: 1rem; /* 设置字体大小 */
+    color: #555; /* 设置字体颜色为浅灰色 */
 }
+
 
 .gallery-item:hover {
     transform: scale(1.05);
@@ -275,3 +323,6 @@ footer p {
     max-height: 90%;
     object-fit: contain;
 }
+
+
+  

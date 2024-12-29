@@ -173,10 +173,6 @@ header nav ul li a:hover {
     z-index: 0; /* 确保线条在文字下层 */
 }
 
-/* 鼠标悬停时，线条从中间向两边展开 */
-.sidebar ul li:hover::before {
-    transform: scaleX(1);
-}
 
 
 /* 文章信息 */
@@ -262,4 +258,23 @@ footer {
     .content {
         min-width: 100%;
     }
+}
+
+.large-img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.img-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.large-img2 {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
 }

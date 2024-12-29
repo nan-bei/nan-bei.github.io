@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 设置字符编码为UTF-8，确保页面显示特殊字符正常 -->
     <meta charset="UTF-8">
+    <!-- 设置视口，以确保页面在移动设备上良好显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  UM Guildline 🏛
-    </title>
+    <!-- 页面标题 -->
+    <title>UM Guildline 🏛</title>
+    <!-- 引用外部CSS文件 -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <!-- 页眉部分 -->
     <header>
         <div class="container">
+            <!-- 网站标题和徽标 -->
             <h1>
-                <img src="/asset/UM.png"  class="UM">
+                <!-- 插入UM徽标图片 -->
+                <img src="/asset/UM.png" class="UM">
                 UM Guildline
             </h1>
+            <!-- 导航菜单 -->
             <nav>
                 <ul>
+                    <!-- 每个导航链接对应一个HTML页面 -->
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/content/UMDiscovery/UMDiscovery.html">UM Discovery</a></li>
                     <li><a href="/content/AccommodationGuide/AccommodationGuide.html">Accommodation Guide</a></li>
@@ -26,32 +33,40 @@
             </nav>
         </div>
     </header>
+
+    <!-- 主体内容部分 -->
     <main>
+        <!-- 英雄部分，显示欢迎文字和按钮链接 -->
         <section class="hero">
             <div class="hero-text">
-                <h2>Welcome to the UM Guildline!</h2>
-                <div class="button-container">
-                    <a href="/content/UMDiscovery/UMDiscovery.html" class="cta-button">Discovery</a>
-                    <a href="/content/AccommodationGuide/AccommodationGuide.html" class="cta-button">Accommodation Guide</a>
-                    <a href="/content/TransportationInfo/TransportationInfo.html" class="cta-button">Transportation Info</a>
-                    <a href="/content/LifeandServices/LifeandServices.html" class="cta-button" >Life and Services</a>
-                </div>
-                
-                
-                
+                <h2 class="content2 felx">Welcome to the UM Guildline!</h2>
+                <br>
+            <div class="button-container">
+                <!-- 每个按钮链接到相关页面 -->
+                <a href="/content/UMDiscovery/UMDiscovery.html" class="cta-button">Discovery</a>
+                <a href="/content/AccommodationGuide/AccommodationGuide.html" class="cta-button">Accommodation Guide</a>
+                <a href="/content/TransportationInfo/TransportationInfo.html" class="cta-button">Transportation Info</a>
+                <a href="/content/LifeandServices/LifeandServices.html" class="cta-button">Life and Services</a>
+            </div>
             </div>
         </section>
+
+        <!-- 特色部分，介绍UM的基本信息 -->
         <section class="features">
             <div class="container">
-                <h3> Introduction         </h3>
+                <h3>Introduction</h3>
                 <ul>
-                    <li>The Universiti Malaya (lit 'University of Malaya'; abbreviated as UM) is a public research university located in Kuala Lumpur, Malaysia. It is the oldest and highest ranking Malaysian institution of higher education, and was the only university in newly independent Malaya.The university has graduated five prime ministers of Malaysia, and other political, business, and cultural figures of national prominence.</li>
+                    <!-- 简介中列出UM的历史和地位 -->
+                    <li>The Universiti Malaya (lit 'University of Malaya'; abbreviated as UM) is a public research university located in Kuala Lumpur, Malaysia. It is the oldest and highest ranking Malaysian institution of higher education, and was the only university in newly independent Malaya. The university has graduated five prime ministers of Malaysia, and other political, business, and cultural figures of national prominence.</li>
                     <li>Today, UM has more than 2,300 faculty members and is divided into fourteen faculties, two academies, three institutes and two academic centres. In the latest QS World University Rankings, UM is currently ranked 60th in the world, 11th in Asia, 3rd in Southeast Asia and the highest ranked learning institution in Malaysia.</li>
                 </ul>
             </div>
         </section>
+
+        <!-- 图库部分，展示UM的标志性建筑图片 -->
         <section class="gallery">
             <div class="gallery-container">
+                <!-- 每个图片项包含图片和文字说明 -->
                 <div class="gallery-item">
                     <img src="asset/R1.jpg" alt="Image 1" data-src="asset/R1.jpg">
                     <p>Administration Building</p>
@@ -76,18 +91,20 @@
                     <img src="asset/R6.jpg" alt="Image 6" data-src="asset/R6.jpg">
                     <p>Art Museum</p>
                 </div>
-                <!-- 更多图片项 -->
+                <!-- 可以添加更多图片项 -->
             </div>
         </section>
-        
-        
-        
     </main>
+
+    <!-- 页脚部分 -->
     <footer>
         <div class="container">
+            <!-- 页脚版权声明 -->
             <p>&copy; 2024 ， All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- 引用外部JavaScript文件 -->
     <script src="index.js"></script>
 </body>
 </html>
