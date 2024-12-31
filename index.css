@@ -69,7 +69,7 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative; /* 设置相对定位 */
-    background: url('/asset/Background.jpeg') no-repeat center center; /* 设置背景图片及其位置 */
+    background: url('/asset/a64853a3-09e6-47aa-8149-23f24dae7ccf.jpg') no-repeat center center; /* 设置背景图片及其位置 */
     background-size: cover; /* 背景图片覆盖整个容器 */
     color: #fff; /* 确保文字颜色为白色，便于阅读 */
     padding: 50px 0; /* 上下内边距为50像素 */
