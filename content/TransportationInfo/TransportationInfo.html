@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation Info 🏛</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <h1>
+                <img src="../../asset/UM.png" class="UM">
+                Transportation Info
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/content/UMDiscovery/UMDiscovery.html">UM Discovery</a></li>
+                    <li><a href="/content/AccommodationGuide/AccommodationGuide.html">Accommodation Guide</a></li>
+                    <li><a href="/content/TransportationInfo/TransportationInfo.html">Transportation Info</a></li>
+                    <li><a href="/content/LifeandServices/LifeandServices.html">Life and Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app">
+        <section class="layout">
+            <aside class="sidebar" style="width: 300px; height: 680px;">
+                <h3>Table of Contents</h3>
+                <ul>
+                  <li>
+                    <a href="#section1" @click="handleClick(1)">UM Shuttle Bus Service</a>
+                  </li>
+                  <li>
+                    <a href="#section2" @click="handleClick(2)">Getting to University of Malaya</a>
+                  </li>
+                  <li>
+                    <a href="#section3" @click="handleClick(3)">Exploring Kuala Lumpur</a>
+                  </li>
+                  <li>
+                    <a href="#section4" @click="handleClick(4)">Student Transport Card</a>
+                  </li>
+                </ul>
+              </aside>
+              
+            <section class="content">
+                <div v-if="msg === 1">
+                    <h2>UM Shuttle Bus Service</h2>
+                    <img src="campus - bus - 1.jpg" alt="UM Shuttle Bus" style="width:100%; border-radius:8px; margin-bottom:20px;">
+                    <div class="route - cards" style="display: grid; gap: 20px; grid-template-columns: repeat(2, 1fr);">
+                        <div class="route - card" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h4 style="color: #dc2626;">Route AB</h4>
+                            <p>UM Central - Islamic Studies - KK12 - UM Central</p>
+                            <p>Bus: SS7795Y Kamal</p>
+                            <small>Key stops: Faculty Zone, Academic Zones, Residential Colleges</small>
+                        </div>
+                        <div class="route - card" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h4 style="color: #2563eb;">Route BA</h4>
+                            <p>UM Central - PASUM - Islamic Studies - KK3/4/7</p>
+                            <p>Bus: PPB 515 Daus</p>
+                            <small>Covers: PASUM, Islamic Studies Academy, Science Faculty</small>
+                        </div>
+                        <div class="route - card" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h4 style="color: #854d0e;">Route C</h4>
+                            <p>UM Central - Pantai Dalam</p>
+                            <p>Bus: PPB 414 Mail</p>
+                            <small>Stops: Pasum, Angkasapuri, Pantai Permai, Engineering Faculty</small>
+                        </div>
+                        <div class="route - card" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h4 style="color: #1e40af;">College 13 Shuttle</h4>
+                            <p>UM Central - Kolej Kediaman Ke 13</p>
+                            <small>Direct shuttle service to College 13</small>
+                        </div>
+                        <div class="route - card" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h4 style="color: #15803d;">Route D</h4>
+                            <p>UM Central - Rumah Antarabangsa</p>
+                            <small>Serves: Engineering Faculty, International House, Multiple Rapid Stops</small>
+                        </div>
+                        <div class="route - card" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h4 style="color: #ea580c;">Route E</h4>
+                            <p>UM Central - Kolej Kediaman Kesembilan (KK9)</p>
+                            <p>Bus: PPB 212 Kamil</p>
+                            <small>Stops: Science Faculty, Tun Syed Zahiruddin RC</small>
+                        </div>
+                    </div>
+                    
+
+                     <div class="service - notes" style="margin-top: 20px; padding: 15px; background: #fee2e2; border-radius: 8px;">
+                         <h4>Service Notes:</h4>
+                         <ul style="list-style:none; padding-left:0;">
+                             <li>• No service on weekends (Saturday & Sunday)</li>
+                             <li>• No service on public holidays</li>
+                             <li>• No service during mid semester, semester break & study week</li>
+                             <li>• Service suspended during Friday Prayer (12:30 pm - 2:30 pm)</li>
+                         </ul>
+                     </div>
+                </div>
+
+                <div v-if="msg === 2">
+                    <article>
+                        <h2>Getting to University of Malaya</h2>
+                        <div class="transport - options" style="margin: 20px 0;">
+                            <div class="transport - card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                                <h3 style="color: #2c5282; display: flex; align-items: center;">
+                                    <span style="font-size: 1.5em; margin-right: 10px;">✈️</span>
+                                    From KLIA/KLIA2 Airport
+                                </h3>
+                                <img src="klia - photo.jpg" alt="KLIA" style="width:100%; margin-bottom:10px;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px;">
+                                    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px;">
+                                        <h4>Option 1: KLIA Express + LRT</h4>
+                                        <ul style="list-style: none; padding-left: 0;">
+                                            <li style="margin-bottom: 8px;">• KLIA Express to KL Sentral (28 mins)</li>
+                                            <li style="margin-bottom: 8px;">• Transfer to LRT Kelana Jaya Line</li>
+                                            <li style="margin-bottom: 8px;">• Exit at University Station</li>
+                                            <li>• Total Time: ~1 hour</li>
+                                            <li>• Cost: ~RM55</li>
+                                        </ul>
+                                    </div>
+                                    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px;">
+                                        <h4>Option 2: Grab/Taxi</h4>
+                                        <ul style="list-style: none; padding-left: 0;">
+                                            <li style="margin-bottom: 8px;">• Direct journey to UM</li>
+                                            <li style="margin-bottom: 8px;">• Available 24/7</li>
+                                            <li style="margin-bottom: 8px;">• Time: 45-60 mins</li>
+                                            <li>• Cost: ~RM80-100</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+
+                <div v-if="msg === 3">
+                    <h2>Exploring Kuala Lumpur</h2>
+                  
+                    <!-- Nearby Attractions -->
+                    <div class="attractions - grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                      <!-- Near UM -->
+                      <div class="attraction - card">
+                        <img src="mid - valley - photo.jpg" alt="Mid Valley Megamall">
+                        <div class="attraction - details">
+                          <h3 style="color: #2c5282;">Near UM (Within 3km)</h3>
+                          <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 15px;">
+                            <div style="margin-bottom: 15px;">
+                              <h4>Mid Valley Megamall</h4>
+                              <p>• Shopping, dining, entertainment</p>
+                              <p>• 1 LRT stop or free shuttle bus</p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                              <h4>KL Gateway Mall</h4>
+                              <p>• Modern shopping complex</p>
+                              <p>• Walking distance from LRT</p>
+                            </div>
+                            <div>
+                              <h4>The Gardens Mall</h4>
+                              <p>• Luxury shopping and dining</p>
+                              <p>• Connected to Mid Valley</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Popular Attractions -->
+                      <div class="attraction - card">
+                        <img src="klcc - photo.jpg" alt="KLCC & Petronas Twin Towers">
+                        <div class="attraction - details">
+                          <h3 style="color: #2c5282;">Must-Visit KL Attractions</h3>
+                          <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 15px;">
+                            <div style="margin-bottom: 15px;">
+                              <h4>KLCC & Petronas Twin Towers</h4>
+                              <p>• World's tallest twin towers</p>
+                              <p>• LRT to KLCC station (25 mins)</p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                              <h4>Batu Caves</h4>
+                              <p>• Hindu temple and limestone caves</p>
+                              <p>• KTM from KL Sentral (45 mins)</p>
+                            </div>
+                            <div>
+                              <h4>Central Market & Petaling Street</h4>
+                              <p>• Cultural shopping experience</p>
+                              <p>• LRT to Pasar Seni (20 mins)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Local Food & Culture -->
+                      <div class="attraction - card">
+                        <img src="jalan - alor - photo.jpg" alt="Jalan Alor Food Street">
+                        <div class="attraction - details">
+                          <h3 style="color: #2c5282;">Local Food & Culture</h3>
+                          <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 15px;">
+                            <div style="margin-bottom: 15px;">
+                              <h4>Jalan Alor Food Street</h4>
+                              <p>• Famous street food haven</p>
+                              <p>• LRT to Bukit Bintang (20 mins)</p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                              <h4>Bangsar</h4>
+                              <p>• Trendy cafes and restaurants</p>
+                              <p>• 2 LRT stops from University</p>
+                            </div>
+                            <div>
+                              <h4>Islamic Arts Museum</h4>
+                              <p>• Cultural exhibitions</p>
+                              <p>• 15 mins by Grab</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Travel Tips -->
+                    <div class="tips - card" style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #2c5282;">
+                      <h3 style="color: #2c5282; margin-bottom: 15px;">Travel Tips</h3>
+                      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div>
+                          <h4>Transportation</h4>
+                          <ul style="list-style: none; padding-left: 0;">
+                            <li>• Download Grab app for convenient transport</li>
+                            <li>• Get Touch 'n Go card for public transport</li>
+                            <li>• Use LRT during peak hours to avoid traffic</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4>Best Times to Visit</h4>
+                          <ul style="list-style: none; padding-left: 0;">
+                            <li>• Attractions: Weekday mornings</li>
+                            <li>• Shopping: Weekday afternoons</li>
+                            <li>• Food streets: Evening time</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4>Money Saving</h4>
+                          <ul style="list-style: none; padding-left: 0;">
+                            <li>• Show student ID for discounts</li>
+                            <li>• Use public transport whenever possible</li>
+                            <li>• Join UM's weekend excursion programs</li>
+                          </ul>
+                        </div>
+                      </div>    
+                    </div>
+                  </div>
+                  
+
+
+        <div v-if="msg === 4">
+                    <h2>Student Transport Card</h2>
+
+          <!-- Overview Card -->
+          <div class="overview - card" style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #2c5282;">
+            <h3 style="color: #2c5282; margin-bottom: 15px;">Overview</h3>
+            <p>The student transport card provides discounted access to public transportation and campus bus services. Please follow the steps below to apply for your card.</p>
+          </div>
+
+          <!-- Application Process Timeline -->
+          <div class="timeline - container" style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin: 20px 0;">
+            <h3 style="color: #2c5282; margin-bottom: 25px;">Application Process</h3>
+
+            <div class="timeline - step" style="position: relative; padding-left: 30px; margin-bottom: 40px; border-left: 2px solid #2c5282;">
+              <div style="position: absolute; left: -10px; width: 20px; height: 20px; background: #2c5282; border-radius: 50%;"></div>
+              <h4 style="color: #2c5282; margin-bottom: 10px;">Step 1: Faculty Confirmation</h4>
+              <div style="background: #f8f9fa; padding: 15px; border-radius: 6px;">
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                  <li style="margin-bottom: 8px;">• Visit your faculty office</li>
+                  <li style="margin-bottom: 8px;">• Submit student ID and current semester proof</li>
+                  <li style="margin-bottom: 8px;">• Obtain faculty confirmation letter</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline - step" style="position: relative; padding-left: 30px; margin-bottom: 40px; border-left: 2px solid #2c5282;">
+              <div style="position: absolute; left: -10px; width: 20px; height: 20px; background: #2c5282; border-radius: 50%;"></div>
+              <h4 style="color: #2c5282; margin-bottom: 10px;">Step 2: Online Application</h4>
+              <div style="background: #f8f9fa; padding: 15px; border-radius: 6px;">
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                  <li style="margin-bottom: 8px;">• Access the official application portal</li>
+                  <li style="margin-bottom: 8px;">• Complete all required information</li>
+                  <li style="margin-bottom: 8px;">• Upload necessary documents</li>
+                  <li style="margin-bottom: 8px;">• Submit your application</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline - step" style="position: relative; padding-left: 30px; margin-bottom: 40px; border-left: 2px solid #2c5282;">
+              <div style="position: absolute; left: -10px; width: 20px; height: 20px; background: #2c5282; border-radius: 50%;"></div>
+              <h4 style="color: #2c5282; margin-bottom: 10px;">Step 3: Card Collection</h4>
+              <div style="background: #f8f9fa; padding: 15px; border-radius: 6px;">
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                  <li style="margin-bottom: 8px;">• Wait for approval notification</li>
+                  <li style="margin-bottom: 8px;">• Bring required documents:</li>
+                  <li style="margin-left: 20px; margin-bottom: 8px;">- Faculty confirmation letter</li>
+                  <li style="margin-left: 20px; margin-bottom: 8px;">- Passport</li>
+                  <li style="margin-left: 20px; margin-bottom: 8px;">- Approval notification</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Required Documents -->
+          <div class="documents - grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+            <div class="document - card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #2c5282; margin-bottom: 15px;">Documents for Faculty Confirmation</h4>
+              <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="width: 20px; margin-right: 10px;">📄</span>
+                  Valid student ID
+                </li>
+                <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="width: 20px; margin-right: 10px;">📄</span>
+                  Current semester registration proof
+                </li>
+                <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="width: 20px; margin-right: 10px;">📄</span>
+                  Student status verification
+                </li>
+              </ul>
+            </div>
+
+            <div class="document - card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+              <h4 style="color: #2c5282; margin-bottom: 15px;">Documents for Online Application</h4>
+              <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="width: 20px; margin-right: 10px;">🗂️</span>
+                  Scanned passport copy
+                </li>
+                <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="width: 20px; margin-right: 10px;">📸</span>
+                  Digital passport photo
+                </li>
+                <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                  <span style="width: 20px; margin-right: 10px;">📋</span>
+                  Faculty confirmation letter (PDF)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Benefits Section -->
+          <div class="benefits - card" style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin-top: 20px;">
+            <h3 style="color: #2c5282; margin-bottom: 15px;">Card Benefits</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+              <div style="background: #ffffff; padding: 15px; border-radius: 6px;">
+                <span style="font-size: 1.5em; margin-right: 10px;">🚇</span>
+                <strong>LRT Discounts</strong>
+                <p style="margin-top: 5px; color: #666;">Up to 50% off regular fares</p>
+              </div>
+              <div style="background: #ffffff; padding: 15px; border-radius: 6px;">
+                <span style="font-size: 1.5em; margin-right: 10px;">🚌</span>
+                <strong>Free Campus Bus</strong>
+                <p style="margin-top: 5px; color: #666;">Unlimited campus shuttle access</p>
+              </div>
+              <div style="background: #ffffff; padding: 15px; border-radius: 6px;">
+                <span style="font-size: 1.5em; margin-right: 10px;">📅</span>
+                <strong>Monthly Pass</strong>
+                <p style="margin-top: 5px; color: #666;">Special student monthly rates</p>
+              </div>
+            </div>
+            </div>
+                
+                
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ， All rights reserved.</p>
+        </div>
+    </footer>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script type="text/javascript">
+    const vm = new Vue({
+        el: '#app',
+        data: { msg: 1 },
+        methods: {
+            handleClick(index) { this.msg = index }
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.querySelector('.sidebar');
+        const content = document.querySelector('.content');
+        const originalTop = sidebar.offsetTop;
+        const originalWidth = sidebar.offsetWidth;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const topOffset = 20;
+            const windowWidth = window.innerWidth;
+
+            if (windowWidth < 768) return;
+
+            const dynamicWidth = Math.max(200, Math.min(windowWidth * 0.3, 450));
+
+            if (scrollY >= originalTop - topOffset) {
+                sidebar.classList.add('fixed');
+                sidebar.style.width = `${dynamicWidth}px`;
+                content.style.marginLeft = `${dynamicWidth + 20}px`;
+                content.style.width = `calc(100% - ${dynamicWidth + 20}px)`;
+            } else {
+                sidebar.classList.remove('fixed');
+                sidebar.style.width = `${originalWidth}px`;
+                content.style.marginLeft = '0';
+                content.style.width = '100%';
+            }
+        });
+    });
+</script>
+   
+  </body>
+</html>
+
+

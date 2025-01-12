@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UM Discovery 🏛</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <h1>
+                <img src="../../asset/UM.png" class="UM">
+                UM Discovery
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/content/UMDiscovery/UMDiscovery.html">UM Discovery</a></li>
+                    <li><a href="/content/AccommodationGuide/AccommodationGuide.html">Accommodation Guide</a></li>
+                    <li><a href="/content/TransportationInfo/TransportationInfo.html">Transportation Info</a></li>
+                    <li><a href="/content/LifeandServices/LifeandServices.html">Life and Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app">
+        <section class="layout">
+            <aside class="sidebar" style="width: 300px; height: 680px;">
+                <h3>Table of Contents</h3>
+                <ul>
+                  <li>
+                    <a href="#section1" @click="handleClick(1)">History</a>
+                  </li>
+                  <li>
+                    <a href="#section2" @click="handleClick(2)">Information for New Students</a>
+                    <ul class="sidebar2" style="height: auto;">
+                      <li>
+                        <a href="#section2-1" @click="handleClick(2)" style="font-size: 1.2em;">🔹Apply for documents</a>
+                      </li>
+                      <li>
+                        <a href="#section2-2" @click="handleClick(3)" style="font-size: 1.2em;">🔹UM Orientation</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#section3" @click="handleClick(4)">Campus Highlights</a>
+                  </li>
+                  <li>
+                    <a href="#section4" @click="handleClick(5)">Campus at a glance</a>
+                  </li>
+                </ul>
+              </aside>
+              
+              
+            <section class="content">
+                <div v-if="msg === 1">
+                    <article>
+                        <div>
+                            <div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Universiti Malaya, or UM, Malaysia's oldest university, is situated on a 922 acre (373.12 hectare) campus in the southwest of Kuala Lumpur, the capital of Malaysia.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It was founded on 28 September 1905 in Singapore as the King Edward VII College of Medicine and on 8th October 1949, it became the Universiti Malaya with the merger of the King Edward VII College of Medicine and Raffles College (founded in 1928).<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Universiti Malaya derives its name from the term 'Malaya' as the country was then known. The Carr-Saunders Commission on University Education in Malaya, which recommended the setting up of the university, noted in its Report in 1948: "The Universiti Malaya would provide for the first time a common centre where varieties of race, religion and economic interest could mingle in joint endeavour ... For a Universiti Malaya must inevitably realise that it is a university for Malaya."<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The growth of the University was very rapid during the first decade of its establishment and this resulted in the setting up of two autonomous Divisions on 15 January 1959, one located in Singapore and the other in Kuala Lumpur. In 1960, the government of the two territories indicated their desire to change the status of the Divisions into that of a national university. Legislation was passed in 1961 and the Universiti Malaya was established on 1st January 1962.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On June 16th 1962, Universiti Malaya celebrated the installation of its first Chancellor, Tunku Abdul Rahman Putra Al-Haj, who was also the country's first prime minister. The first Vice-Chancellor was Professor Oppenheim, a world-renowned Mathematician.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Currently, His Royal Highness The Sultan of Perak Darul Ridzuan, Sultan Nazrin Muizzuddin Shah is the Chancellor of UM.<br>
+                            </div>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <iframe 
+                                    width="100%" 
+                                    height="auto" 
+                                    style="aspect-ratio: 16/9; max-width: 100%;" 
+                                    src="https://www.youtube.com/embed/Us2MWBK3xz8?si=oyNoMHaX_7GNql1t" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                
+                    
+                </div>
+                <div v-if="msg === 2">
+                    <article>
+                        <h3>Visa exchange</h3>
+
+                        <div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;after the physical examination again (emgs up to 80%), the visa exchange will be handed over the passport, if the number of visa exchanges is large, the passport will be left for a long time, to make sure that the mobile phone card, the rental contract and other things that require passports are done before going to the visa exchange, the visa exchange can not be more than one month of the entry, or else you have to pay a fine.<br>
+                            1.	Bring ① passport ② e-Visa paper ③ medical examination receipt ④ stamp duty paper ⑤ pink form (Visa Clearance Form) see right ⑥ green form (scan code to fill in personal information) see right ⑦ MDAC entry slip paper ⑧ offer paper.<br>
+                            2.	First of all, go to the University of Malaya's VISA unit to get the pink form. After getting the pink form, bring the pink form and the paper version of the offer to the staff floor of your faculty, let the staff fill in the pink form, ask when you can pick it up and what kind of notification is given to pick up the pink form. (If there are less people, you can pick it up directly, if there are more people, you need to wait for 1-3 days).<br>
+                            3.	After getting the pink form, bring all the documents mentioned in 1, go back to the visa unit and ask the staff to check if you have all the documents with you and tell you what window to queue up, they will exchange your passport with a temporary pink paper.<br>
+                            4.  Once you have completed the visa exchange, simply wait for the emgs to reach 100% and return to the VISA unit to hand in your temporary documents for your passport.
+                        </div>
+
+                        <h3>Student card</h3>
+                        <div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New students do not need to apply for a student card on their own, the college will be notified, after receiving the notification, go to the office of the college, inform the staff of the relevant information, find the student card, collect the card and sign it. The student card is a RHB Bank Visa card, which can be used as a bank card after activation.<br>
+                            Once you get your student card you will need to do some activation:<br>
+                            1. Go to the main library on the ground floor and ask a staff member to activate it. Once activated, you can check out and return books in the main library, and you can also access places in the main library where you need to swipe your student card with your student card, as well as the school's 24-hour library (next to he&she).<br>
+                            2. Bring ①passport ②offer paper ③student card, go to your convenient RHB Bank branch, find the staff to submit your documents, fill in the form and take a number, then you can wait for the activation of your student bank card at the manned window.
+                        </div>
+                        <h3>Apply for a bank card</h3>
+
+                        <div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you want to apply for a bank card of another bank (maybank), you need to submit an application to the college's email address through your school email address to apply for a confirmation letter of student status and have it stamped by the college. After getting the confirmation letter, you can bring ①passport ②offer paper ③college confirmation letter, go to he&she left side of the maybank to apply for a bank card, but the school within the maybank every day is limited, you need to queue up early to grab a number, if you don't want to queue up the number of the school, you can go to the off-campus maybank, you need to bring ① passport ② paper version of the offer ③ confirmation letter from the faculty.④ Emgs approvel letter paper, than in the school to bring a document, bring all the documents to find the staff of maybank, fill in the form to receive a number can be.
+                        </div>
+                    </article>
+                </div>
+                <div v-if="msg === 3">
+                    <article>
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold; text-align: left;">Welcome Night Party</h3>
+                        <div style="line-height: 1.8; font-size: 1rem; color: #555;">
+                            <p>The University of Malaya's Orientation Party is notified to you by email and lasts for an hour. It is usually held at KK12, the student hostel area, and features opening music by the school orchestra, Malay dances, Indian dances, campus singers, and other programmes that will keep you entertained, and there is a new semester food street market on both sides of the party, so you can enjoy the food while feeling the welcoming atmosphere of the University of Malaya.</p>
+                        </div>
+                
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold; text-align: left;">New Student Orientation</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <div style="flex: 1; padding-right: 20px; font-size: 1rem; color: #555; line-height: 1.8;">
+                                <p>The University of Malaya Orientation is usually held within a week before the start of classes (Orientation Week), and will be notified by email. The Orientation is usually held in the lecture theatre of the faculty, and will start with a faculty-wide Orientation. If the Orientation is in the morning, the faculty will also prepare breakfast for the new students (usually sandwiches and noodles), and at noon, they will prepare a lunch for new students with a lunchbox and a box of beverages, which varies from faculty to faculty. After the orientation session, a senior student will take you to the lunch queue, and then you will go to another classroom according to your major, where you will meet the tutors of your professor and get their contact information. Before the orientation, there will be gifts for new students, and the gifts for each faculty are different every year, so it is important to attend the orientation. Undergraduates will be given a college shirt (baseball jersey), which is different from the Chinese school uniform and has the University of Malaya logo on it. If you want the same baseball shirt for postgraduate entry, don't worry, you can get it at the University of Malaya souvenir shop.</p>
+                            </div>
+                            <div style="flex: 0 0 30%;">
+                                <img src="../../asset/img1.jpg" style="width: 100%; height: auto; border-radius: 8px;">
+                            </div>
+                        </div>
+                
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold; text-align: left;">
+                            <a href="https://www.google.com/maps/place/HALAMAN+Bookstore+-+Universiti+Malaya+Press/@3.1205101,101.6451984,14.5z/data=!4m10!1m2!2m1!1sHALAMAN!3m6!1s0x31cc497a62a64717:0xaba33dfe1fed7f74!8m2!3d3.1222692!4d101.6571159!15sCgdIQUxBTUFOWgkiB2hhbGFtYW6SAQpib29rX3N0b3Jl4AEA!16s%2Fg%2F11hd5f6066?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">University of Malaya Souvenir Shop</a>
+                        </h3>
+                        <div style="line-height: 1.8; font-size: 1rem; color: #555;">
+                            <p>The full name of the University of Malaya Souvenir Shop can be searched for HALAMAN, and the location is opposite the university's auditorium, near the UM Attractions backdrop hit point.</p>
+                            <p>Open time: Monday ~ Friday: 8am-5pm, Saturday: 9am-1pm. The shop is closed for lunch from 12:00 to 2:00 every day.</p>
+                            <p>The souvenir shop has a variety of products, mainly books, school supplies, clothing, hats, backpacks, mugs, and other various life knickknacks. The products will be updated and iterative, and you can see the pictures below.</p>
+                        </div>
+                
+                        <h3 style="font-size: 1.5rem; color: #333; font-weight: bold; text-align: left;">Gallery</h3>
+                        <section class="gallery" style="overflow: hidden;">
+                            <div class="gallery-container" style="display: flex; transition: transform 0.5s ease;">
+                                <div class="gallery-item" style="flex: 0 0 33.33%; padding: 10px;">
+                                    <img src="../../asset/img2.jpg" alt="Image 1" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="gallery-item" style="flex: 0 0 33.33%; padding: 10px;">
+                                    <img src="../../asset/img3.jpg" alt="Image 2" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="gallery-item" style="flex: 0 0 33.33%; padding: 10px;">
+                                    <img src="../../asset/img4.jpg" alt="Image 3" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="gallery-item" style="flex: 0 0 33.33%; padding: 10px;">
+                                    <img src="../../asset/img5.jpg" alt="Image 4" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="gallery-item" style="flex: 0 0 33.33%; padding: 10px;">
+                                    <img src="../../asset/img6.jpg" alt="Image 5" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                                <div class="gallery-item" style="flex: 0 0 33.33%; padding: 10px;">
+                                    <img src="../../asset/img7.jpg" alt="Image 6" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                            </div>
+                            <div class="gallery-controls" style="text-align: center; margin-top: 10px;">
+                                <button onclick="moveGallery(-1)" style="padding: 10px 20px; margin-right: 10px; font-size: 1.2rem; background-color: #333; color: #fff; border: none; cursor: pointer;">&lt;</button>
+                                <button onclick="moveGallery(1)" style="padding: 10px 20px; font-size: 1.2rem; background-color: #333; color: #fff; border: none; cursor: pointer;">&gt;</button>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+                
+                <script>
+                    let currentIndex = 0;
+                
+                    function moveGallery(direction) {
+                        const galleryContainer = document.querySelector('.gallery-container');
+                        const galleryItems = document.querySelectorAll('.gallery-item');
+                        const totalItems = galleryItems.length;
+                        const itemsPerPage = 2; 
+                
+                        const totalPages = Math.ceil(totalItems / itemsPerPage);
+                
+                        currentIndex = (currentIndex + direction + totalPages) % totalPages;
+                
+                        galleryContainer.style.transform = `translateX(-${currentIndex * (100 / totalPages)}%)`;
+                    }
+                </script>
+                
+                <div v-if="msg === 4">
+                    <h3>
+                        <a href="https://www.google.com/maps/place/Universiti+Malaya+Central+Library/@3.1219322,101.6544193,17z/data=!4m14!1m7!3m6!1s0x31cdb47024217187:0x1e85ebc65d47d641!2sUniversity+of+Malaya!8m2!3d3.1219268!4d101.6569942!16zL20vMDFxNDF6!3m5!1s0x31cc497a4a87487d:0x90e2ad1fcca9c7e!8m2!3d3.1202977!4d101.6543403!16s%2Fg%2F1td3n_77?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Raja Zarith Sofiah Library（Main Library）</a>
+                    </h3>
+                    <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <img src="../../asset/img8.jpg" style="max-width: 50%; height: auto;">
+                        <img src="../../asset/img9.jpg" style="max-width: 20%; height: auto;">
+                        <img src="../../asset/img10.jpg" style="max-width: 20%; height: auto;">
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The main library is the centrepiece of academic resources and houses a large collection of books, journals and digital resources. The library also provides study space, computer facilities and a quiet study atmosphere to help students concentrate.
+                    </div>
+                
+                   
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background-color: #f0f0f0; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                        <div style="background-color: #ffffff; padding: 10px; border-radius: 8px;">
+                            <h3>
+                                <a href="https://www.google.com/maps/place/Dewan+Tunku+Canselor/@3.1219322,101.6544193,17z/data=!4m14!1m7!3m6!1s0x31cdb47024217187:0x1e85ebc65d47d641!2sUniversity+of+Malaya!8m2!3d3.1219268!4d101.6569942!16zL20vMDFxNDF6!3m5!1s0x31cc4979ec4d2fd1:0x2c04042b5ab99481!8m2!3d3.1214714!4d101.6566121!16s%2Fg%2F1vfzbpgn?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Dewan Tunku Canselor</a>
+                            </h3>
+                            <div class="img-container">
+                                <img src="../../asset/img11.jpg" class="large-img">
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UM most signature building and representative of brutalist architecture, this symbolic building not only serves as an architectural landmark on campus, but also as a venue for important events, including graduation ceremonies, public lectures and cultural performances.
+                            </div>
+                        </div>
+                        <div style="background-color: #ffffff; padding: 10px; border-radius: 8px;">
+                            <h3>
+                                <a href="https://www.google.com/maps/search/Tasik+Varsiti/@3.1202221,101.6561395,18z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Tasik Varsiti</a>
+                            </h3>
+                            <div class="img-container">
+                                <img src="../../asset/img12.jpg" class="large-img">
+                                <br>
+                                <br>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A beautiful lake located in the centre of the campus provides students with a place to relax and unwind, jog, enjoy a picnic or simply enjoy the beauty of nature.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background-color: #f0f0f0; padding: 15px; border-radius: 10px; margin-top: 20px;">
+                        <div style="background-color: #ffffff; padding: 10px; border-radius: 8px;">
+                            <h3>
+                                <a href="https://www.google.com/maps/place/Museum+of+Asian+Art/@3.1182667,101.6506403,17z/data=!4m14!1m7!3m6!1s0x31cc4830e8d5d04f:0x302a076221b30e17!2sMuseum+of+Asian+Art!8m2!3d3.1182613!4d101.6532152!16s%2Fg%2F1vmqzx1r!3m5!1s0x31cc4830e8d5d04f:0x302a076221b30e17!8m2!3d3.1182613!4d101.6532152!16s%2Fg%2F1vmqzx1r?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Cultural and Heritage Features</a>
+                            </h3>
+                            <div class="img-container">
+                                <img src="../../asset/img14.jpg" class="large-img">
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Asian Art Museum on campus exhibits a rich collection of artefacts, while the well-maintained greenery and gardens on campus provide a visually and culturally appealing learning environment.
+                            </div>
+                        </div>
+                        <div style="background-color: #ffffff; padding: 10px; border-radius: 8px;">
+                            <h3>University of Malaya entrance</h3>
+                            <div class="img-container">
+                                <br>
+                                <br>
+                                <br>
+                                <img src="../../asset/img22.png" class="large-img2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+
+
+                <div v-if="msg === 5">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; justify-items: center; padding: 20px;">
+                        <div style="text-align: center;">
+                            <h3>MAP1:</h3>
+                            <img src="../../asset/img23.jpg" style="width: 100%; max-height: 500px; object-fit: contain;">
+                        </div>
+                        <div style="text-align: center;">
+                            <h3>MAP2:</h3>
+                            <img src="../../asset/img24.jpg" style="width: 100%; max-height: 500px; object-fit: contain;">
+                        </div>
+                    </div>
+                
+                    <div style="text-align: center; margin-top: 20px;">
+                        You can tour the campus by bus and view buses via the webpage:<br>
+                        <el-button type="primary">
+                            <a style="color: #eee; text-decoration: none" href="https://myrapidbus.prasarana.com.my/kiosk?route=733&bus=">B U S</a>
+                        </el-button>
+                    </div>
+                </div>
+                
+                
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ， All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script type="text/javascript">
+        const vm = new Vue({
+            el: '#app',
+            data: { msg: 1 },
+            methods: {
+                handleClick(index) { this.msg = index }
+            }
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+            const originalTop = sidebar.offsetTop;
+            const originalWidth = sidebar.offsetWidth;
+    
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const topOffset = 20;
+                const windowWidth = window.innerWidth;
+    
+                if (windowWidth < 768) return;
+    
+                const dynamicWidth = Math.max(200, Math.min(windowWidth * 0.3, 450));
+    
+                if (scrollY >= originalTop - topOffset) {
+                    sidebar.classList.add('fixed');
+                    sidebar.style.width = `${dynamicWidth}px`;
+                    content.style.marginLeft = `${dynamicWidth + 20}px`;
+                    content.style.width = `calc(100% - ${dynamicWidth + 20}px)`;
+                } else {
+                    sidebar.classList.remove('fixed');
+                    sidebar.style.width = `${originalWidth}px`;
+                    content.style.marginLeft = '0';
+                    content.style.width = '100%';
+                }
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
